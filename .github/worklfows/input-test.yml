@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: 'Comment for the reason why you trigger this workflow' 
+        required: true
+name: input-test
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo $INPUT_COMMENT
