@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo ${{ inputs.comment }}
+        run: echo "${input_comment}"
+        env:
+          input_comment: ${{ inputs.comment }}
