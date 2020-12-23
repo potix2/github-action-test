@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo "${INPUT_comment}"
+        run: echo "${{ github.event.inputs.comment }}"
